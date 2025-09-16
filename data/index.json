@@ -1,5 +1,5 @@
 {
   "basics": {
-    "useState": "data/basics/useState.js"
+    "useState": "../data/basics/useState.js"
   }
 }
