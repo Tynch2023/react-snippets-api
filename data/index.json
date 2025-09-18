@@ -1,7 +1,7 @@
 {
   "basics": {
     "useState": {
-      "main": "data/basics/useState.js",
+      "main": "data/basics/useState/useState.js",
       "filter": {
         "filterTasks": "data/basics/useState/filter/filterTasks.js"
       }
