@@ -1,5 +1,13 @@
 {
   "basics": {
-    "useState": "data/basics/useState.js"
+    "useState": {
+      "main": "data/basics/useState.js",
+      "filter": {
+        "filterTasks": "data/basics/useState/filter/filterTasks.js"
+      }
+    },
+    "useEffect": {
+      "main": "data/basics/useEffect.js"
+    }
   }
 }
