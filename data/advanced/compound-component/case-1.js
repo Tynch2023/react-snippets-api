@@ -1,79 +1,90 @@
-//! Tabs.js------------------------------------------------------
+/* eslint-disable */
+// 👆 Esta línea hace que ignore los warnings de ESLint SOLO en este archivo
+
 import { createContext, useState, useContext } from "react";
 
-const TabsContext = createContext();
+// -----------------------------------------------------------------------------
+// ✅ CONTEXTO (parte clave del patrón compuesto)
+// -----------------------------------------------------------------------------
+const CounterContext = createContext();
 
-function Tabs({ children, defaultIndex = 0 }) {
-  const [activeIndex, setActiveIndex] = useState(defaultIndex);
+// -----------------------------------------------------------------------------
+// ✅ COMPONENTE PADRE (provee estado + lógica)
+// -----------------------------------------------------------------------------
+function Counter({ children }) {
+  const [count, setCount] = useState(0);
+
+  const increase = () => setCount((c) => c + 1);
+  const decrease = () => setCount((c) => c - 1);
 
   return (
-    <TabsContext.Provider value={{ activeIndex, setActiveIndex }}>
-      <div className="tabs">{children}</div>
-    </TabsContext.Provider>
+    <CounterContext.Provider value={{ count, increase, decrease }}>
+      <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+        {children}
+      </div>
+    </CounterContext.Provider>
   );
 }
 
-function List({ children }) {
-  return <div className="tabs-list">{children}</div>;
+// -----------------------------------------------------------------------------
+// ✅ SUB-COMPONENTES (consumen el contexto)
+// -----------------------------------------------------------------------------
+
+// Muestra el número
+function Count() {
+  const { count } = useContext(CounterContext);
+  return <span style={{ fontSize: "1.5rem" }}>{count}</span>;
 }
 
-function Button({ children, index }) {
-  const { activeIndex, setActiveIndex } = useContext(TabsContext);
-  const active = index === activeIndex;
-
+// Muestra un texto que describe el contador
+function Label({ children }) {
   return (
-    <button
-      onClick={() => setActiveIndex(index)}
-      style={{
-        fontWeight: active ? "bold" : "normal",
-        borderBottom: active ? "2px solid black" : "2px solid transparent",
-        cursor: "pointer",
-        marginRight: "8px"
-      }}
-    >
-      {children}
+    <span style={{ marginRight: "4px", fontWeight: "bold" }}>{children}</span>
+  );
+}
+
+// Botón para sumar
+function Increase({ icon }) {
+  const { increase } = useContext(CounterContext);
+  return (
+    <button onClick={increase} style={{ padding: "6px 10px" }}>
+      {icon}
     </button>
   );
 }
 
-function Panel({ children, index }) {
-  const { activeIndex } = useContext(TabsContext);
-  return activeIndex === index ? <div>{children}</div> : null;
+// Botón para restar
+function Decrease({ icon }) {
+  const { decrease } = useContext(CounterContext);
+  return (
+    <button onClick={decrease} style={{ padding: "6px 10px" }}>
+      {icon}
+    </button>
+  );
 }
 
-Tabs.List = List;
-Tabs.Button = Button;
-Tabs.Panel = Panel;
+// -----------------------------------------------------------------------------
+// ✅ Asignamos los sub-componentes como propiedades del componente principal
+// -----------------------------------------------------------------------------
+Counter.Count = Count;
+Counter.Label = Label;
+Counter.Increase = Increase;
+Counter.Decrease = Decrease;
 
-export default Tabs;
-
-//! App.js------------------------------------------------------
-import Tabs from "./Tabs";
-
+// -----------------------------------------------------------------------------
+// ✅ APP PRINCIPAL — Ejemplo de uso
+// -----------------------------------------------------------------------------
 export default function App() {
   return (
-    <div>
-      <h1>Compound Components — Tabs Example</h1>
+    <div style={{ padding: "30px" }}>
+      <h1>Compound Component Pattern</h1>
 
-      <Tabs defaultIndex={0}>
-        <Tabs.List>
-          <Tabs.Button index={0}>Home</Tabs.Button>
-          <Tabs.Button index={1}>Profile</Tabs.Button>
-          <Tabs.Button index={2}>Settings</Tabs.Button>
-        </Tabs.List>
-
-        <Tabs.Panel index={0}>
-          <p>🏠 Home content here.</p>
-        </Tabs.Panel>
-
-        <Tabs.Panel index={1}>
-          <p>👤 Profile info here.</p>
-        </Tabs.Panel>
-
-        <Tabs.Panel index={2}>
-          <p>⚙️ Settings go here.</p>
-        </Tabs.Panel>
-      </Tabs>
+      <Counter>
+        <Counter.Label>Mi contador:</Counter.Label>
+        <Counter.Decrease icon="−" />
+        <Counter.Count />
+        <Counter.Increase icon="+" />
+      </Counter>
     </div>
   );
 }
