@@ -27,7 +27,7 @@
 // }
 
 //! Modal
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 // Creamos el contexto para compartir estado
 const ModalContext = createContext();
@@ -62,12 +62,38 @@ Modal.Open = function ModalOpen({ children, opens }) {
 //! Contenedor del modal
 Modal.Window = function ModalWindow({ children, name }) {
   const { openName, close } = useContext(ModalContext);
+  const ref = useRef();
+
+  // ✅ Cerrar con ESC
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.key === "Escape") close();
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [close]);
+
+  // ✅ Cerrar al click fuera
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (ref.current && !ref.current.contains(e.target)) {
+        close();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [close]);
 
   if (name !== openName) return null;
 
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 relative w-[90%] max-w-md animate-scaleIn">
+      <div
+        ref={ref}
+        className="bg-white rounded-lg shadow-lg p-6 relative w-[90%] max-w-md animate-scaleIn"
+      >
         {children}
         {/* Botón de cerrar */}
         <button onClick={close} className="absolute top-3 right-3 text-2xl">
@@ -93,7 +119,7 @@ Modal.Close = function ModalClose({ children }) {
   );
 };
 
-//! Form in modal
+//! AuthForm
 export default function AuthForm({ mode }) {
   const isLogin = mode === "login";
 
