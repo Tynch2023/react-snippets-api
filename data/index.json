@@ -1,12 +1,5 @@
 {
   "advanced": {
-    "useReducer": {
-      "counter": "data/advanced/useReducer/counter.js",
-      "counter-advance": "data/advanced/useReducer/counter-advance.js",
-      "form": "data/advanced/useReducer/form.js",
-      "setinterval": "data/advanced/useReducer/setinterval.js",
-      "shopping-cart": "data/advanced/useReducer/shopping-cart.js"
-    },
     "compound-component": {
       "0-toggle": "data/advanced/compound-component/0-toggle.js",
       "1-count": "data/advanced/compound-component/1-count.js",
@@ -28,17 +21,44 @@
       "thunks": {
         "thunk-1": "data/advanced/redux-toolkit/thunks/thunk-1.js"
       }
+    },
+    "supabase": {
+      "SupabaseReactQueryExample": "data/advanced/supabase/SupabaseReactQueryExample.js"
+    },
+    "useReducer": {
+      "counter": "data/advanced/useReducer/counter.js",
+      "counter-advance": "data/advanced/useReducer/counter-advance.js",
+      "form": "data/advanced/useReducer/form.js",
+      "setinterval": "data/advanced/useReducer/setinterval.js",
+      "shopping-cart": "data/advanced/useReducer/shopping-cart.js"
     }
   },
   "basics": {
+    "useEffect": {
+      "effect-reducer": "data/basics/useEffect/effect-reducer.js",
+      "effect": "data/basics/useEffect/effect.js"
+    },
     "useState": {
-      "main": "data/basics/useState/useState.js",
       "filter": {
         "filterTasks": "data/basics/useState/filter/filterTasks.js"
-      }
-    },
-    "useEffect": {
-      "main": "data/basics/useEffect.js"
+      },
+      "case-0": "data/basics/useState/case-0.js"
     }
+  },
+  "css": {
+    "css-module": {
+      "button": "data/css/css-module/button.js"
+    },
+    "tailwind-css": {
+      "empty": "empty"
+    }
+  },
+  "custom": {
+    "empty": "empty"
+  },
+  "react-performance": {
+    "avoid-re-renders": "data/avoid-re-renders/avoid-re-renders.js",
+    "memo-2": "data/avoid-re-renders/memo-2.js",
+    "memo": "data/avoid-re-renders/memo.js"
   }
 }
