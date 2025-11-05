@@ -6,6 +6,28 @@
       "form": "data/advanced/useReducer/form.js",
       "setinterval": "data/advanced/useReducer/setinterval.js",
       "shopping-cart": "data/advanced/useReducer/shopping-cart.js"
+    },
+    "compound-component": {
+      "0-toggle": "data/advanced/compound-component/0-toggle.js",
+      "1-count": "data/advanced/compound-component/1-count.js",
+      "2-modal": "data/advanced/compound-component/2-modal.js",
+      "3-Tabs": "data/advanced/compound-component/3-Tabs.js",
+      "5-Tabs": "data/advanced/compound-component/5-Tabs.js"
+    },
+    "context-API": {
+      "case-1": "data/advanced/context-API/case-1.js"
+    },
+    "react-router": {
+      "example-1": "data/advanced/react-router/example-1.js",
+      "useFetcherExample": "data/advanced/react-router/useFetcherExample.js",
+      "useFetcherFormExample": "data/advanced/react-router/useFetcherFormExample.js"
+    },
+    "redux-toolkit": {
+      "0-counter": "data/advanced/redux-toolkit/0-counter.js",
+      "crud-1": "data/advanced/redux-toolkit/crud-1.js",
+      "thunks": {
+        "thunk-1": "data/advanced/redux-toolkit/thunks/thunk-1.js"
+      }
     }
   },
   "basics": {
