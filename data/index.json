@@ -29,7 +29,7 @@
       "counter": "data/advanced/useReducer/counter.js",
       "counter-advance": "data/advanced/useReducer/counter-advance.js",
       "form": "data/advanced/useReducer/form.js",
-      "setinterval": "data/advanced/useReducer/setinterval.js",
+      "setInterval": "data/advanced/useReducer/setInterval.js",
       "shopping-cart": "data/advanced/useReducer/shopping-cart.js"
     }
   },
