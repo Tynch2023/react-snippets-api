@@ -16,30 +16,26 @@ export default function UsersList() {
   const [error, setError] = useState(null); // guarda errores del fetch
 
   useEffect(() => {
-    let isMounted = true; // bandera para evitar actualizar si se desmonta
+    const abort = new AbortController();
 
     async function fetchUsers() {
       try {
         setLoading(true);
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
-
+        const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+          signal: abort.signal,
+        });
         if (!res.ok) throw new Error("Error al obtener los usuarios");
-
         const data = await res.json();
-        if (isMounted) setUsers(data);
+        setUsers(data);
       } catch (err) {
-        if (isMounted) setError(err.message);
+        if (err.name !== "AbortError") setError(err.message);
       } finally {
-        if (isMounted) setLoading(false);
+        setLoading(false);
       }
     }
 
     fetchUsers();
-
-    // Cleanup: evita actualizaciones si el componente se desmonta
-    return () => {
-      isMounted = false;
-    };
+    return () => abort.abort();
   }, []); // [] → se ejecuta solo una vez al montar el componente
 
   // Renderizado condicional según el estado

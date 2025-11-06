@@ -1,64 +1,68 @@
 {
-  "advanced": {
-    "compound-component": {
-      "0-toggle": "data/advanced/compound-component/0-toggle.js",
-      "1-count": "data/advanced/compound-component/1-count.js",
-      "2-modal": "data/advanced/compound-component/2-modal.js",
-      "3-Tabs": "data/advanced/compound-component/3-Tabs.js",
-      "5-Tabs": "data/advanced/compound-component/5-Tabs.js"
+  "Fundamentals": {
+    "State": {
+      "useState - básico": "data/basics/useState/case-0.js",
+      "useState - filtro de tareas": "data/basics/useState/filter/filterTasks.js"
     },
-    "context-API": {
-      "case-1": "data/advanced/context-API/case-1.js"
-    },
-    "react-router": {
-      "example-1": "data/advanced/react-router/example-1.js",
-      "useFetcherExample": "data/advanced/react-router/useFetcherExample.js",
-      "useFetcherFormExample": "data/advanced/react-router/useFetcherFormExample.js"
-    },
-    "redux-toolkit": {
-      "0-counter": "data/advanced/redux-toolkit/0-counter.js",
-      "crud-1": "data/advanced/redux-toolkit/crud-1.js",
-      "thunks": {
-        "thunk-1": "data/advanced/redux-toolkit/thunks/thunk-1.js"
+    "Effects": {
+      "useEffect - reducer": "data/basics/useEffect/effect-reducer.js",
+      "useEffect - fetch usuarios": "data/basics/useEffect/effect.js"
+    }
+  },
+  "State Management": {
+    "Redux Toolkit": {
+      "Contador (RTK)": "data/advanced/redux-toolkit/0-counter.js",
+      "Inventario CRUD (RTK)": "data/advanced/redux-toolkit/crud-1.js",
+      "Thunks": {
+        "Ejemplo de thunk": "data/advanced/redux-toolkit/thunks/thunk-1.js"
       }
     },
-    "supabase": {
-      "SupabaseReactQueryExample": "data/advanced/supabase/SupabaseReactQueryExample.js"
-    },
     "useReducer": {
-      "counter": "data/advanced/useReducer/counter.js",
-      "counter-advance": "data/advanced/useReducer/counter-advance.js",
-      "form": "data/advanced/useReducer/form.js",
-      "setInterval": "data/advanced/useReducer/setInterval.js",
-      "shopping-cart": "data/advanced/useReducer/shopping-cart.js"
+      "Contador con useReducer": "data/advanced/useReducer/counter.js",
+      "Contador avanzado": "data/advanced/useReducer/counter-advance.js",
+      "Formulario con useReducer": "data/advanced/useReducer/form.js",
+      "setInterval con reducer": "data/advanced/useReducer/setInterval.js",
+      "Carrito de compras": "data/advanced/useReducer/shopping-cart.js"
+    },
+    "Context": {
+      "Context API - caso 1": "data/advanced/context-API/case-1.js"
     }
   },
-  "basics": {
-    "useEffect": {
-      "effect-reducer": "data/basics/useEffect/effect-reducer.js",
-      "effect": "data/basics/useEffect/effect.js"
-    },
-    "useState": {
-      "filter": {
-        "filterTasks": "data/basics/useState/filter/filterTasks.js"
-      },
-      "case-0": "data/basics/useState/case-0.js"
+  "Routing": {
+    "React Router": {
+      "Router básico": "data/advanced/react-router/example-1.js",
+      "useFetcher": "data/advanced/react-router/useFetcherExample.js",
+      "useFetcher + Form": "data/advanced/react-router/useFetcherFormExample.js"
     }
   },
-  "css": {
-    "css-module": {
-      "button": "data/css/css-module/button.js"
+  "UI Patterns": {
+    "Compound Components": {
+      "Toggle": "data/advanced/compound-component/0-toggle.js",
+      "Counter": "data/advanced/compound-component/1-count.js",
+      "Modal": "data/advanced/compound-component/2-modal.js",
+      "Tabs": "data/advanced/compound-component/3-Tabs.js",
+      "Tabs (variante)": "data/advanced/compound-component/5-Tabs.js"
+    }
+  },
+  "Performance": {
+    "Evitar re-renders": "data/react-performance/avoid-re-renders.js",
+    "memo - ejemplo 2": "data/react-performance/memo-2.js",
+    "memo": "data/react-performance/memo.js"
+  },
+  "Styling": {
+    "CSS Modules": {
+      "Button": "data/css/css-module/button.js"
     },
-    "tailwind-css": {
+    "Tailwind": {
       "empty": "empty"
     }
   },
-  "custom": {
-    "empty": "empty"
+  "Backend/DB": {
+    "Supabase": {
+      "Supabase + React Query": "data/advanced/supabase/SupabaseReactQueryExample.js"
+    }
   },
-  "react-performance": {
-    "avoid-re-renders": "data/avoid-re-renders/avoid-re-renders.js",
-    "memo-2": "data/avoid-re-renders/memo-2.js",
-    "memo": "data/avoid-re-renders/memo.js"
+  "Custom": {
+    "empty": "empty"
   }
 }

@@ -115,21 +115,21 @@ export default function ProductForm() {
   const dispatch = useDispatch();
   const [product, setProduct] = useState({ name: "", price: 0, quantity: 0 });
 
-  function handleChangue(e) {
+  function handleChange(e) {
     const { name, value } = e.target;
     setProduct({
       ...product,
-      [name]: name === "price" || name === "amount" ? Number(value) : value,
+      [name]: name === "price" || name === "quantity" ? Number(value) : value,
     });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!product) return;
+    if (!product.name) return;
 
     dispatch(addProduct(product));
-    setProduct({ name: "", price: "", quantity: "" });
+    setProduct({ name: "", price: 0, quantity: 0 });
   }
 
   return (
@@ -140,25 +140,25 @@ export default function ProductForm() {
         className="bg-gray-300 text-zinc-800"
         type="text"
         value={product.name}
-        onChange={handleChangue}
+        onChange={handleChange}
       />
 
       <label>Price:</label>
       <input
         name="price"
-        className="bg-gray-300 text-zinc-80"
-        type="text"
+        className="bg-gray-300 text-zinc-800"
+        type="number"
         value={product.price}
-        onChange={handleChangue}
+        onChange={handleChange}
       />
 
       <label>Quantity:</label>
       <input
         name="quantity"
-        className="bg-gray-300 text-zinc-80"
-        type="text"
+        className="bg-gray-300 text-zinc-800"
+        type="number"
         value={product.quantity}
-        onChange={handleChangue}
+        onChange={handleChange}
       />
 
       <button className="py-1 px-3 text-gray-100 bg-amber-400 mt-1 hover:bg-amber-600 cursor-pointer">
@@ -211,7 +211,7 @@ export default function ProductList() {
               Remove
             </button>
             <button
-              disabled={product.quantity > 0 ? false : true}
+              disabled={product.quantity <= 0}
               onClick={() => dispatch(sellProduct(product))}
               className="bg-amber-400 hover:bg-amber-600 text-white font-bold py-1 px-4 rounded cursor-pointer"
             >
