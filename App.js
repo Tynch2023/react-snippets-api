@@ -96,7 +96,8 @@ export default function App() {
                 : "text-gray-200"
             }`}
           >
-            {key}
+            <span className="mr-2 align-middle text-sky-400">⚛️</span>
+            <span className="align-middle">{key}</span>
           </button>
         );
       }
