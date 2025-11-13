@@ -17,6 +17,9 @@
         "Ejemplo de thunk": "data/advanced/redux-toolkit/thunks/thunk-1.js"
       }
     },
+    "React Query": {
+      "Fetch básico": "data/advanced/react-query-basic-example/react-query-fetch.js"
+    },
     "useReducer": {
       "Contador con useReducer": "data/advanced/useReducer/counter.js",
       "Contador avanzado": "data/advanced/useReducer/counter-advance.js",
