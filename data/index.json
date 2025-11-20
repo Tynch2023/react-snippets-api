@@ -62,7 +62,8 @@
   },
   "Backend/DB": {
     "Supabase": {
-      "Supabase + React Query": "data/advanced/supabase/SupabaseReactQueryExample.js"
+      "Supabase + React Query": "data/advanced/supabase/SupabaseReactQueryExample.js",
+      "Rutas protegidas": "data/advanced/supabase/protectedRoutes.js"
     }
   },
   "Custom": {
