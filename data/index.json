@@ -18,7 +18,10 @@
       }
     },
     "React Query": {
-      "Fetch básico": "data/advanced/react-query-basic-example/react-query-fetch.js"
+      "Fetch básico": "data/advanced/react-query-basic-example/react-query-fetch.js",
+      "Mutación Optimista": "data/advanced/react-query-advance/optimistic-mutation.js",
+      "Scroll Infinito": "data/advanced/react-query-advance/infinite-scroll.js",
+      "Queries Dependientes": "data/advanced/react-query-advance/dependent-queries.js"
     },
     "useReducer": {
       "Contador con useReducer": "data/advanced/useReducer/counter.js",
@@ -66,7 +69,16 @@
       "Rutas protegidas": "data/advanced/supabase/protectedRoutes.js"
     }
   },
-  "Custom": {
-    "empty": "empty"
+  "Custom Hooks": {
+    "useDebounce": "data/custom/useDebounce.js",
+    "useLocalStorage": "data/custom/useLocalStorage.js",
+    "useWindowSize": "data/custom/useWindowSize.js",
+    "useOnClickOutside": "data/custom/useOnClickOutside.js",
+    "useFetch": "data/custom/useFetch.js",
+    "usePrevious": "data/custom/usePrevious.js",
+    "useToggle": "data/custom/useToggle.js",
+    "useMediaQuery": "data/custom/useMediaQuery.js",
+    "useEventListener": "data/custom/useEventListener.js",
+    "useIsFirstRender": "data/custom/useIsFirstRender.js"
   }
 }
