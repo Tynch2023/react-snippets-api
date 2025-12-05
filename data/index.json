@@ -55,6 +55,9 @@
     "memo - ejemplo 2": "data/react-performance/memo-2.js",
     "memo": "data/react-performance/memo.js"
   },
+  "Error Handling": {
+    "React Error Boundary": "data/advanced/error-handling/react-error-boundary.js"
+  },
   "Styling": {
     "CSS Modules": {
       "Button": "data/css/css-module/button.js"
