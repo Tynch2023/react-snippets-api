@@ -41,6 +41,9 @@
       "useFetcher + Form": "data/advanced/react-router/useFetcherFormExample.js"
     }
   },
+  "Next.js (App Router)": {
+    "Server/Client/Suspense": "data/advanced/nextjs/nextjs-server-client.js"
+  },
   "UI Patterns": {
     "Compound Components": {
       "Toggle": "data/advanced/compound-component/0-toggle.js",
