@@ -42,7 +42,8 @@
     }
   },
   "Next.js (App Router)": {
-    "Server/Client/Suspense": "data/advanced/nextjs/nextjs-server-client.js"
+    "Server/Client/Suspense": "data/advanced/nextjs/nextjs-server-client.js",
+    "API Route Handler básico": "data/advanced/nextjs/api-route-handler-basic.js"
   },
   "UI Patterns": {
     "Compound Components": {
