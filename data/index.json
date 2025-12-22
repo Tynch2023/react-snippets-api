@@ -43,7 +43,15 @@
   },
   "Next.js (App Router)": {
     "Server/Client/Suspense": "data/advanced/nextjs/nextjs-server-client.js",
-    "API Route Handler básico": "data/advanced/nextjs/api-route-handler-basic.js"
+    "API Route Handler básico": "data/advanced/nextjs/api-route-handler-basic.js",
+    "use client": {
+      "Botón contador (use client)": "data/advanced/nextjs/use-client/use-client-counter.js",
+      "Toggle de tema (use client)": "data/advanced/nextjs/use-client/use-client-theme-toggle.js"
+    },
+    "use server": {
+      "Server action inline (form)": "data/advanced/nextjs/use-server/server-action-inline.js",
+      "Server action con validación": "data/advanced/nextjs/use-server/server-action-validate.js"
+    }
   },
   "UI Patterns": {
     "Compound Components": {
