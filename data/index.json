@@ -32,6 +32,10 @@
     },
     "Context": {
       "Context API - caso 1": "data/advanced/context-API/case-1.js"
+    },
+    "Zustand": {
+      "Contador básico": "data/advanced/zustand/counter-basic.js",
+      "Carrito de compras": "data/advanced/zustand/shopping-cart.js"
     }
   },
   "Routing": {
