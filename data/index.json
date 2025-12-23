@@ -59,6 +59,9 @@
     },
     "Forms": {
       "useFormStatus - Update profile": "data/advanced/nextjs/use-form-status/update-profile-form.js"
+    },
+    "useTransition": {
+      "useTransition - Delete reservation": "data/advanced/nextjs/use-transition-react/useTransition-react-form.js"
     }
   },
   "UI Patterns": {
