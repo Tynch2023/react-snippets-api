@@ -56,6 +56,9 @@
     "use server": {
       "Server action inline (form)": "data/advanced/nextjs/use-server/server-action-inline.js",
       "Server action con validación": "data/advanced/nextjs/use-server/server-action-validate.js"
+    },
+    "Forms": {
+      "useFormStatus - Update profile": "data/advanced/nextjs/use-form-status/update-profile-form.js"
     }
   },
   "UI Patterns": {
