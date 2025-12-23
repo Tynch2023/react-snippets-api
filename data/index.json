@@ -35,7 +35,8 @@
     },
     "Zustand": {
       "Contador básico": "data/advanced/zustand/counter-basic.js",
-      "Carrito de compras": "data/advanced/zustand/shopping-cart.js"
+      "Carrito de compras": "data/advanced/zustand/shopping-cart.js",
+      "Carrito de compras 2": "data/advanced/zustand/shopping-cart-2.js"
     }
   },
   "Routing": {
