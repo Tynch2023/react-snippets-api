@@ -106,5 +106,14 @@
     "useMediaQuery": "data/custom/useMediaQuery.js",
     "useEventListener": "data/custom/useEventListener.js",
     "useIsFirstRender": "data/custom/useIsFirstRender.js"
+  },
+  "Estructuras de Proyecto": {
+    "Por Features": "data/project-structures/by-feature.js",
+    "Por Tipo de Archivo": "data/project-structures/by-type.js",
+    "Estructura Híbrida": "data/project-structures/hybrid.js",
+    "Next.js App Router": "data/project-structures/nextjs-app-router.js",
+    "Domain-Driven Design": "data/project-structures/ddd.js",
+    "Monorepo (Turborepo)": "data/project-structures/monorepo.js",
+    "Bundled Features": "data/project-structures/bundled-features.js"
   }
 }
