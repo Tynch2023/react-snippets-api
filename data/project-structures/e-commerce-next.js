@@ -62,25 +62,44 @@ ecommerce/
 │           └─ route.ts           # Webhook de Stripe
 │
 ├─ components/
-│  ├─ ui/                         # shadcn/ui components
+│  ├─ ui/                         # Componentes base con Tailwind
 │  │  ├─ button.tsx
 │  │  ├─ card.tsx
 │  │  ├─ input.tsx
-│  │  └─ ...
+│  │  ├─ badge.tsx
+│  │  ├─ dialog.tsx
+│  │  ├─ dropdown.tsx
+│  │  ├─ spinner.tsx
+│  │  └─ skeleton.tsx
 │  │
-│  ├─ ProductCard.tsx
-│  ├─ ProductGrid.tsx
-│  ├─ Navbar.tsx
-│  ├─ Footer.tsx
-│  ├─ CartItem.tsx
-│  ├─ AdminSidebar.tsx
-│  └─ AdminNavbar.tsx
+│  ├─ layout/                     # Componentes de layout
+│  │  ├─ Navbar.tsx
+│  │  ├─ Footer.tsx
+│  │  ├─ Sidebar.tsx
+│  │  └─ Container.tsx
+│  │
+│  ├─ products/                   # Componentes de productos
+│  │  ├─ ProductCard.tsx
+│  │  ├─ ProductGrid.tsx
+│  │  ├─ ProductFilters.tsx
+│  │  └─ ProductGallery.tsx
+│  │
+│  ├─ cart/                       # Componentes de carrito
+│  │  ├─ CartItem.tsx
+│  │  ├─ CartSummary.tsx
+│  │  └─ CartDrawer.tsx
+│  │
+│  └─ admin/                      # Componentes admin
+│     ├─ AdminSidebar.tsx
+│     ├─ AdminNavbar.tsx
+│     ├─ StatsCard.tsx
+│     └─ DataTable.tsx
 │
 ├─ lib/
 │  ├─ db.ts                       # MongoDB connection
 │  ├─ stripe.ts                   # Stripe config
 │  ├─ auth.ts                     # Auth helpers
-│  ├─ utils.ts                    # Utility functions (cn, etc)
+│  ├─ utils.ts                    # cn() y utilities (Tailwind)
 │  │
 │  └─ validations/
 │     ├─ product.schema.ts        # Zod schemas para productos
@@ -118,6 +137,12 @@ ecommerce/
 │  ├─ validators.ts               # Validaciones custom
 │  └─ api-helpers.ts              # Helpers para API calls
 │
+├─ styles/
+│  ├─ globals.css                 # @tailwind base/components/utilities
+│  └─ themes/                     # Variables de tema (opcional)
+│     ├─ default.css
+│     └─ dark.css
+│
 ├─ public/
 │  ├─ images/
 │  │  ├─ products/
@@ -126,19 +151,19 @@ ecommerce/
 │  │
 │  └─ icons/
 │
-├─ styles/
-│  └─ globals.css
-│
 ├─ __tests__/                     # Tests (opcional)
 │  ├─ components/
 │  ├─ api/
 │  └─ utils/
 │
 ├─ middleware.ts                  # Protege /admin y rate limiting
+│
 ├─ .env.local
 ├─ .env.example
 ├─ .gitignore
+│
 ├─ next.config.js
-├─ tailwind.config.ts
+├─ tailwind.config.ts            # ⭐ Configuración de Tailwind
+├─ postcss.config.js             # ⭐ Config de PostCSS
 ├─ tsconfig.json
 └─ package.json
