@@ -1,30 +1,46 @@
 ecommerce/
-├─ app/                     # App Router (Next)
+├─ app/
 │  ├─ layout.tsx
-│  ├─ page.tsx              # Home
+│  ├─ page.tsx                    # Home (cliente)
+│
 │  ├─ products/
+│  │  ├─ page.tsx                 # Listado (cliente)
 │  │  └─ [id]/
-│  │     └─ page.tsx        # Producto individual
+│  │     └─ page.tsx              # Detalle (cliente)
+│
 │  ├─ cart/
 │  │  └─ page.tsx
+│
 │  ├─ checkout/
 │  │  └─ page.tsx
+│
+│  ├─ admin/                      # 🔐 ADMIN
+│  │  ├─ layout.tsx               # Layout admin
+│  │  ├─ page.tsx                 # Dashboard
+│  │  └─ products/
+│  │     ├─ page.tsx              # Lista / gestión
+│  │     └─ new/
+│  │        └─ page.tsx           # Crear producto
+│
 │  └─ api/
-│     └─ stripe/
-│        └─ route.ts        # Backend Stripe (server)
+│     └─ products/
+│        └─ route.ts              # GET (cliente) / POST (admin)
 │
 ├─ components/
 │  ├─ ui/
-│  │  ├─ Button.tsx
-│  │  └─ Modal.tsx
 │  ├─ ProductCard.tsx
-│  └─ Navbar.tsx
+│  ├─ Navbar.tsx
+│  └─ AdminSidebar.tsx
 │
 ├─ lib/
-│  ├─ stripe.ts             # Cliente Stripe
-│  └─ db.ts                 # Mongo / Prisma
+│  ├─ db.ts                       # Mongo
+│  ├─ stripe.ts
+│  └─ auth.ts                     # Protección admin
 │
-├─ store/                   # Estado global (Zustand)
+├─ models/
+│  └─ Product.ts
+│
+├─ store/
 │  └─ cart.store.ts
 │
 ├─ types/
@@ -36,7 +52,6 @@ ecommerce/
 ├─ styles/
 │  └─ globals.css
 │
-├─ .env.local               # STRIPE_SECRET_KEY, etc
-├─ next.config.js
-├─ package.json
-└─ tsconfig.json
+├─ middleware.ts                  # Protege /admin
+├─ .env.local
+└─ package.json
