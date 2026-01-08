@@ -114,6 +114,7 @@
     "Next.js App Router": "data/project-structures/nextjs-app-router.js",
     "Domain-Driven Design": "data/project-structures/ddd.js",
     "Monorepo (Turborepo)": "data/project-structures/monorepo.js",
-    "Bundled Features": "data/project-structures/bundled-features.js"
+    "Bundled Features": "data/project-structures/bundled-features.js",
+    "E-commerce example": "data/project-structures/e-commerce.js"
   }
 }
